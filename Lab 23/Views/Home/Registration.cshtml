@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "RegistrationPage";
+}
+
+<h2>Registration Page</h2>
+<script src="~/Scripts/ValidationBaby.js"></script>
+<link href="~/Content/CSSyooo.css" rel="stylesheet" />
+<h3> @ViewBag.UserAdded@ </h3>
+
+<form action="/Home/AddUser" method="post">
+    <div class="flex-container">
+        <label class="control-label">First Name</label> <input type="text" name="FirstName" class="form-control" placeholder="John" id="FirstName" onkeyup="validFirst()" required /> <span id="message"></span>
+    </div>
+    <div class="flex-container">
+        <label class="control-label">Last Name</label> <input type="text" name="LastName" class="form-control" placeholder="Smith" id="LastName" onkeyup="validLast()" required /> <span id="message1"></span>
+    </div>
+    <div class="flex-container">
+        <label class="control-label">E-Mail</label> <input type="email" name="Email" class="form-control" placeholder="JohnSmith@Hotmail.com" id="Email" onkeyup="validEmail()" required /> <span id="message3"></span>
+    </div>
+    <div class="flex-container">
+        <label class="control-label">Phone Number</label> <input type="tel" name="PhoneNumber" class="form-control" placeholder="5555555555" id="PhoneNumber" onkeyup="validPhone()" required /> <span id="message2"></span>
+    </div>
+    <div class="flex-container">
+        <label class="control-label">Password</label> <input type="password" name="Password" class="form-control" id="Password" onkeyup="validPW()" required /> <span id="message4"></span>
+    </div>
+    <div class="flex-container">
+        <label>Gender:<input type="radio" name="gender" />Male</label><label><input type="radio" name="gender" />Female</label>
+    </div>
+    <p></p>
+    <input type="submit" value="Submit" class="btn-primary" />
+
+</form>
